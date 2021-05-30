@@ -21,11 +21,12 @@
 			/* background-position: left center; */
 			/* background-position: left bottom; */
 			/* background-position: center top; */
-			background-position: center;
+			/* background-position: center; */
 			/* background-position: center bottom; */
 			/* background-position: right top; */
 			/* background-position: right center; */
 			/* background-position: right bottom; */
+			background-position: 300px 100px;
 
 			/* 자기 크기로 보여라 */
 			/* background-size: auto auto;  */
@@ -37,24 +38,28 @@
 			/* background-clip: border-box; */
 			/* background-clip: padding-box; */
 			/* background-clip: content-box; */
-			background-clip: text;
+
+			background-clip: text; /* 모든 background(color, image) */
 			-webkit-background-clip: text; /* prefix - chrome, safari, firefox */
 			-o-background-clip: text; /* prefix - opera */
 			-ms-background-clip: text; /* prefix - microsoft */
 			color: transparent;
+
+			background-origin: border-box; /* background-image */
+			animation-name: bgAni;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
 		}
 		h1 {font-size: 100px; font-weight: bold;}
+		@keyframes bgAni {
+			0% {background-position: 0 0;}
+			50% {background-position: 200px 200px;}
+			100% {background-position: 0 0;}
+		}
 	</style>
 </head>
 <body>
 	<div class="wrapper">
-		<h1>HELLO BEAR</h1>
-		<h1>HELLO BEAR</h1>
-		<h1>HELLO BEAR</h1>
-		<h1>HELLO BEAR</h1>
-		<h1>HELLO BEAR</h1>
-		<h1>HELLO BEAR</h1>
-		<h1>HELLO BEAR</h1>
 		<h1>HELLO BEAR</h1>
 	</div>
 </body>
