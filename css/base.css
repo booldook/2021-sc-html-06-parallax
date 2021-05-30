@@ -1,0 +1,25 @@
+/*
+1. block요소(영역을 차지)
+	- h1 ~ h6, p, div, header, footer, section, aside, article
+	- 리스트요소: ul, ol, li, dl, dd, dt
+2. inline 요소(글자취급)
+	- a, span, i, em, b, strong, sub, sup ...
+border: 두께 스타일(solid, dotted, dashed, double) 색상
+*/
+
+/* display: block */
+html, body, h1, h2, h3, h4, h5, h6, p, div, header, footer, section, aside, article, ul, ol, li, dl, dd, dt {margin: 0; padding: 0; box-sizing: border-box; line-height: 1;}
+
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+
+a:link, a:visited, a:hover, a:active {color: inherit; text-decoration: none;}
+
+img {vertical-align: middle;}
+button {background-color: transparent; border: none;}
+address {font-style: normal;}
+input, select, textarea, button {font-size: inherit; box-sizing: border-box;}
+input:focus, select:focus, textarea:focus {outline: none;}
+
+.clear::after {display: block; content: ""; clear: both;}
+.w100 {width: 100%;}
+
