@@ -13,12 +13,13 @@ html, body {font-family: 'Lato', sans-serif;}
 .header-wrapper .search-wrap a:hover {color: #fff; background-color: #ff2600;}
 
 /***************** main-wrapper *******************/
-.main-wrapper {height: 100vh; background-image: url('../img/parallax1.jpg'); background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center;}
-.main-wrapper h1.logo {background-color: #333; color: #fff; font-size: 24px; letter-spacing: 4px; font-weight: bold; padding: 16px;}
+.main-wrapper {height: 100vh; background-image: url('../img/parallax1.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;}
+.main-wrapper > div {height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(255,255,255,.3);}
+.main-wrapper h1.logo {background-color: #333; color: #fff; font-size: 24px; letter-spacing: 16px; font-weight: bold; padding: 16px 16px 16px 32px;}
 
 
 /***************** about-wrapper *******************/
-
+.about-wrapper {height: 100vh;}
 
 /***************** pf-wrapper *******************/
 
