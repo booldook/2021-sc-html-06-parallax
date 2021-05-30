@@ -1,0 +1,20 @@
+.list-wrapper {max-width: 1200px; margin: 100px auto;}
+.list-wrapper .list-wrap {width: 102%; display: flex; flex-wrap: wrap;}
+.list-wrapper .list-wrap .list {flex: 0 0 23%; margin: 0 2% 2% 0; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,.4);}
+.list-wrapper .list-wrap .list > .desc-wrap {padding: 16px;}
+.list-wrapper .list-wrap .list > .desc-wrap > h2.title {font-size: 24px; padding: 16px 0;}
+.list-wrapper .list-wrap .list > .desc-wrap > p.content {font-size: 14px; padding: 8px 0;}
+.list-wrapper .list-wrap .list > .desc-wrap > .price {font-size: 18px; padding: 12px 0; font-weight: bold; border-top: 1px solid #ddd; text-align: right;}
+
+
+@media all and (max-width: 992px) {
+	
+}
+
+@media all and (max-width: 768px) {
+
+}
+
+@media all and (max-width: 576px) {
+
+}
