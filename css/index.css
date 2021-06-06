@@ -2,14 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 html, body {font-family: 'Lato', sans-serif; font-size: 16px;}
+.wrapper {max-width: 1024px; padding: 5em 1em; margin: auto;}
+section {color: #777;}
+section > .title-wrap {text-align: center;}
+section > .title-wrap > h2.title {font-size: 1.625em; margin-bottom: 1em;} 
+section > .title-wrap > p.desc {margin-bottom: 1.5em; font-style: italic; line-height: 2;} 
+section h4.title {font-size: 1.125em;}
 
 
 /***************** header-wrapper *******************/
-.header-wrapper {position: fixed; z-index: 99; width: 100%; display: flex; justify-content: space-between;}
+.header-wrapper {position: fixed; z-index: 99; width: 100%; display: flex; justify-content: space-between; color: #777;}
+.header-wrapper.active {background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,.5); color: #000;}
 .header-wrapper .navi-wrap {display: flex;}
-.header-wrapper .navi-wrap .navi {font-size: 1em; padding: 1em 1.5em; color: #777;}
+.header-wrapper .navi-wrap .navi {font-size: 1em; padding: 1em 1.5em;}
 .header-wrapper .navi-wrap .navi:hover {color: #111; background-color: #eee;}
-.header-wrapper .search-wrap a {font-size: 1em; padding: 1em 1.5em; color: #777;}
+.header-wrapper .search-wrap a {font-size: 1em; padding: 1em 1.5em;}
 .header-wrapper .search-wrap a.navi-bars {display: none;}
 .header-wrapper .search-wrap a.navi-search:hover {color: #fff; background-color: #ff2600;}
 .header-wrapper .search-wrap a.navi-bars:hover {color: #fff; background-color: #424242;}
@@ -22,7 +29,18 @@ html, body {font-family: 'Lato', sans-serif; font-size: 16px;}
 
 
 /***************** about-wrapper *******************/
-.about-wrapper {height: 100vh;}
+.about-wrapper {}
+.about-wrapper .content {line-height: 1.75; text-align: justify;}
+.about-wrapper .content-wrapper {margin: 2em 0; display: flex;}
+.about-wrapper .content-wrapper .img-wrap {width: 50%; padding: 1em;}
+.about-wrapper .content-wrapper .content {width: 50%; padding: 1em;}
+.about-wrapper .content-wrapper .img-wrap > h3 {text-align: center;margin-bottom: 2em; font-weight: bold;}
+.about-wrapper .content-wrapper .img-wrap > h3 > i {margin-right: 1em;}
+.about-wrapper .content-wrapper .img-wrap img {opacity: .7; transition: all 1s;}
+.about-wrapper .content-wrapper .img-wrap img:hover {opacity: 1;}
+
+.about-wrapper .graph-wrapper {}
+.about-wrapper .graph-wrapper h4.title {text-align: center; font-weight: bold;}
 
 /***************** pf-wrapper *******************/
 
@@ -43,7 +61,6 @@ html, body {font-family: 'Lato', sans-serif; font-size: 16px;}
 }
 
 @media all and (max-width: 992px) {
-
 }
 
 @media all and (max-width: 768px) {
