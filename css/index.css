@@ -1,21 +1,24 @@
 /***************** 전역설정 Global *******************/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-html, body {font-family: 'Lato', sans-serif;}
+html, body {font-family: 'Lato', sans-serif; font-size: 16px;}
 
 
 /***************** header-wrapper *******************/
 .header-wrapper {position: fixed; z-index: 99; width: 100%; display: flex; justify-content: space-between;}
 .header-wrapper .navi-wrap {display: flex;}
-.header-wrapper .navi-wrap .navi {padding: 16px 24px; color: #777;}
+.header-wrapper .navi-wrap .navi {font-size: 1em; padding: 1em 1.5em; color: #777;}
 .header-wrapper .navi-wrap .navi:hover {color: #111; background-color: #eee;}
-.header-wrapper .search-wrap a {padding: 16px 24px; color: #777;}
-.header-wrapper .search-wrap a:hover {color: #fff; background-color: #ff2600;}
+.header-wrapper .search-wrap a {font-size: 1em; padding: 1em 1.5em; color: #777;}
+.header-wrapper .search-wrap a.navi-bars {display: none;}
+.header-wrapper .search-wrap a.navi-search:hover {color: #fff; background-color: #ff2600;}
+.header-wrapper .search-wrap a.navi-bars:hover {color: #fff; background-color: #424242;}
 
 /***************** main-wrapper *******************/
 .main-wrapper {height: 100vh; background-image: url('../img/parallax1.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;}
 .main-wrapper > div {height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(255,255,255,.3);}
-.main-wrapper h1.logo {background-color: #333; color: #fff; font-size: 24px; letter-spacing: 16px; font-weight: bold; padding: 16px 16px 16px 32px;}
+.main-wrapper h1.logo {background-color: #333; color: #fff; font-size: 1.5em; letter-spacing: .75em; font-weight: bold; padding: .75em .75em .75em 1.5em;}
+.main-wrapper h1.logo::after {content: 'MY WEBSITE LOGO';}
 
 
 /***************** about-wrapper *******************/
@@ -31,3 +34,24 @@ html, body {font-family: 'Lato', sans-serif;}
 
 
 /***************** 반응형 RESPONSIVE *******************/
+@media all and (max-width: 1400px) {
+
+}
+
+@media all and (max-width: 1200px) {
+
+}
+
+@media all and (max-width: 992px) {
+
+}
+
+@media all and (max-width: 768px) {
+	.header-wrapper .navi-wrap .navi:not(:first-child) {display: none;}
+	.header-wrapper .search-wrap a.navi-search {display: none;}
+	.header-wrapper .search-wrap a.navi-bars {display: inline-block;}
+	.main-wrapper h1.logo::after {content: 'MY LOGO';}
+}
+
+@media all and (max-width: 576px) {
+}

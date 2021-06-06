@@ -1,0 +1,28 @@
+html {font-size: 16px;}
+.list-wrapper {max-width: 1168px; margin: 100px auto;}
+.list-wrapper .list-wrap {width: 102%; display: flex; flex-wrap: wrap;}
+.list-wrapper .list-wrap .list {flex: 0 0 23%; margin: 0 2% 2% 0; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,.4);}
+.list-wrapper .list-wrap .list > .desc-wrap {font-size: 1em; padding: 1em;}
+.list-wrapper .list-wrap .list > .desc-wrap > h2.title {padding: .75em 0;font-size: 1.5em;}
+.list-wrapper .list-wrap .list > .desc-wrap > h2.title {padding: .5em 0;font-size: 1.5em;}
+.list-wrapper .list-wrap .list > .desc-wrap > p.content {line-height: 1.325; font-size: 1em; padding-bottom: 1em;}
+.list-wrapper .list-wrap .list > .desc-wrap > .price {font-weight: bold; border-top: 1px solid #ddd; text-align: right; font-size: 1.25em; padding: .75em 0;}
+
+@media all and (max-width: 1200px) {
+	.list-wrapper {width: calc(100% - 2rem);}
+}
+
+@media all and (max-width: 992px) {
+	.list-wrapper .list-wrap .list > .desc-wrap {font-size: 1.125em;}
+	.list-wrapper .list-wrap .list {flex: 0 0 31.3333%;}
+}
+
+@media all and (max-width: 768px) {
+	.list-wrapper .list-wrap .list > .desc-wrap {font-size: 1.25em;}
+	.list-wrapper .list-wrap .list {flex: 0 0 48%;}
+}
+
+@media all and (max-width: 576px) {
+	.list-wrapper .list-wrap .list > .desc-wrap {font-size: 1.325em;}
+	.list-wrapper .list-wrap .list {flex: 0 0 98%;}
+}
