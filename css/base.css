@@ -1,25 +1,91 @@
-/*
+/* 
 1. block요소(영역을 차지)
-	- h1 ~ h6, p, div, header, footer, section, aside, article
-	- 리스트요소: ul, ol, li, dl, dd, dt
-2. inline 요소(글자취급)
-	- a, span, i, em, b, strong, sub, sup ...
-border: 두께 스타일(solid, dotted, dashed, double) 색상
+   -h1 ~ h6, p, div, header, footer, section ...
+	 -리스트요소 : ul, ol, li, dl, dd, dt
+2. inline요소(글자취급)
+  -a, span, i, em, b, strong, sub, sup ...
+border : 두께 스타일(solid, dotted, dashed, double) 색상
 */
 
-/* display: block */
-html, body, h1, h2, h3, h4, h5, h6, p, div, header, footer, section, aside, article, ul, ol, li, dl, dd, dt {margin: 0; padding: 0; box-sizing: border-box; line-height: 1;}
+/*
+상속가능한 속성 - 글씨 속성들
+- text-align, color, font-size, letter-spacing, line-height ...
+*/
 
-h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+/*
+ 인라인은 크기에 대한 사이즈를 가질수 없다 width padinng ...
+*/
 
-a:link, a:visited, a:hover, a:active {color: inherit; text-decoration: none;}
+/*
+ 버튼,이미지는 글씨속성.
+*/
 
-img {vertical-align: middle;}
-button {background-color: transparent; border: none;}
+/*
+ 스페이스는 아래
+ >는 바로 아래에 있는
+*/
+
+/*
+ input 포커스시 아웃라인,보더 둘다 수정해야 검정 테두리 사라짐.
+*/
+
+/*
+ 패딩과 마진은 부모의 크기 기준.
+ 부모크기 1000px의 자식의 패딩 2%일경우 20px
+ width기준임.
+ width기준으로 상하좌위 크기 동일
+
+ width 600 border 10 paddgin 40 일경우 자식은 들어갈수 있는공간 500px을 기준으로 한다
+
+ 퍼센트는 항상 부모의크기
+*/
+
+/*
+both 안주면 위로 올라옴.
+하지만 크기를줘서 채워놓으면 올라올 공간이없음
+블럭과 인라인 차이인듯?
+*/
+
+/*
+https://docs.google.com/spreadsheets/d/1sQQmSalRUcPXFz8uJodAcxrad_19oHAlvCSj35VVX3c/edit#gid=0
+*/
+
+html, body, h1, h2, h3, h4, h5, h6, p, div, header, footer, section, aside, article, ul, ol, li, dl, dd, dt{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 1;
+
+}
+ul, ol{
+	list-style: none;
+}
+.w100{width: 100%;}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+}
+
+img {vertical-align: middle;} /* 글씨의 기준선상을 가운데로 잡는다. 영문자는 상단 중단 하단으로 기준선을 잡음 이미지는 글씨*/
+button {background-color: transparent; border: none;}/*백그라운드 컬러 제거 투명*/
 address {font-style: normal;}
 input, select, textarea, button {font-size: inherit; box-sizing: border-box;}
-input:focus, select:focus, textarea:focus {outline: none;}
+input:focus,select:focus,textarea:focus{outline :none;}
 
-.clear::after {display: block; content: ""; clear: both;}
-.w100 {width: 100%;}
+a:link, a:visited, a:hover, a:active {color: inherit; text-decoration: none;} /* 글씨 색상을 상속받아라. */ 
 
+.clear:after{display: block; content: ""; clear: both;}
+/*a태그는 기본4가지 색상속성이 존재함 기본 클릭 마우스 링크갓다왓을때 색상*/
+/*글씨 속성만 상속가능. 크기와 관련된건 상속이 안됨.*/
+
+/* 레이아웃잡을때 float사용후 가라앉히는 명령어 클리어 보스*/
+/* width에는 border에 안들어감. border->padding 이안의 내용이 width*/ 
+/* box-sizing: border-box을 주면 border를 포함해서 width가 계산됨. */
+
+/* : ::
+해당 요소의 일부분에 적용되는 가상선택자에는 콜론을 두개 :: 붙이고
+해당 요소 전체에 적용되는 가상선택자에는 콜론을 하나 : 붙인다. */
+
+/* flaot가 되면 블록상태가 없어지고 컨텐츠 크기만큼 줄어듬. */
+
+/* reset css 초기값을 배포해놓은 css가 존재함 노말라이즈 css 존재함 필요하면 다운로드해서 적용 */ 

@@ -1,0 +1,27 @@
+/* em 자신의 폰트사이즈가 가지는 크기. font-size 1.5em(24px) -> padding 1em(16px)이됨 */
+html{font-size: 16px;}
+.list-wrapper{max-width: 1168px; margin: 100px auto;}
+.list-wrapper .list-wrap{width: 102%; display: flex; flex-wrap: wrap;}
+.list-wrapper .list-wrap .list{flex: 0 0 23%; margin: 0 2% 2% 0; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);}
+.list-wrapper .list-wrap .list > .desc-wrap{font-size: 1em;}
+.list-wrapper .list-wrap .list > .desc-wrap > h2.title{font-size: 1.5em; padding: 1em 0;}
+.list-wrapper .list-wrap .list > .desc-wrap > h2.content{}
+.list-wrapper .list-wrap .list > .desc-wrap > .price{ padding: 0.75rem 0; font-weight: bold; border-top: 1px solid #ddd;}
+
+@media all and (max-width:1200px) {
+	.list-wrapper{width: calc(100% - 2rem);} /* 양쪽에 마진 여백을 남기기 위해 위에다 적으면 헤더 크기 잡기가 어렵다고 함.*/
+}
+
+@media all and (max-width:992px) {
+	html{font-size: 18px;}
+	.list-wrapper .list-wrap .list{flex: 0 0 31.33%}
+	
+}
+@media all and (max-width:768px) {
+	html{font-size: 20px;}
+	.list-wrapper .list-wrap .list{flex: 0 0 48%}
+}
+@media all and (max-width:576px) {
+	html{font-size: 22px;}
+	.list-wrapper .list-wrap .list{flex: 0 0 98%}
+}

@@ -1,38 +1,60 @@
-/* pc먼저 만들고 모바일 만들기 */
-/***************** header-wrapper *******************/
-.header-wrapper {position: fixed; z-index: 99; width: 100%; display: flex; justify-content: space-between; background-color: #fff; border-bottom: 1px solid black;}
-.header-wrapper .navi-wrap {display: flex;}
-.header-wrapper .navi-wrap .navi {padding: 16px 24px; color: #777;}
-.header-wrapper .navi-wrap .navi:hover {color: #111; background-color: #eee;}
-.header-wrapper .search-wrap a {padding: 16px 24px; color: #777;}
-.header-wrapper .search-wrap a:hover {color: #fff; background-color: #ff2600;}
+/* 스마트폰은 해상도가 두개. 디바이스해상도 컨텐츠 해상도 */ 
+/* 크기는 맥스값으로 셋팅할것 */ 
+/* 이미들은 박스로 감싸서 크기 100을 줄것 */
+/* pc먼저 만들고 모바일 만들기*/
+.list-wrapper{max-width: 1200px;
+	 margin: auto;
+	 display: flex;
+	 flex-wrap: wrap;
+	}
+	.list-wrapper .list{
+		flex: 0 0 25%; 
+		padding: 1%;
+	}
+
+		/******* header-wrapper    ******/    
+.header-wrapper {position: fixed; z-index: 99; width: 100%; display: flex; justify-content: space-between; background-color: beige; border: 1px solid red;} /* 앱솔루트와 픽시드는 블록속성이 사라짐. */
+.header-wrapper .navi-wrap{display: flex;}
+.header-wrapper .navi-wrap .navi{padding: 16px 24px; color: #777;}
+.header-wrapper .navi-wrap .navi:hover{color: #111; background-color: #777;}
+.header-wrapper .search-wrap a{padding: 16px 24px; color: #777;}
+.header-wrapper .search-wrap a:hover{color: #fff; background-color: #ff2600;}
+
 .header-wrapper.mobile {display: none;}
 .header-wrapper.mobile .bar-wrap a {padding: 16px 24px; color: #777;}
 .header-wrapper.mobile .bar-wrap a:hover {color: #fff; background-color: #ff2600;}
 
+	/* @media all,print,screen 모두,인쇄,화면*/
+  /* 변하는 값만 */ 
+	/* 모든 사이즈를 비율로 적용시키고 변할값만 바꿔주면 됨. */ 
+	@media all and (max-width:1400px) {
+	}
+	@media all and (max-width:1200px) {
+		.list-wrapper .list{
+			flex: 0 0 33.333%; 
+		}
+		
+	}
+	@media all and (max-width:992px) {
+		.list-wrapper .list{
+			flex: 0 0 50%; 
+		}
+		
+	}
+	@media all and (max-width:768px) {
+		.header-wrapper {display: none;}
+		.header-wrapper.mobile {display: flex;}
+		
+		
+	}
+	@media all and (max-width:576px) {
+		.list-wrapper .list{
+			flex: 0 0 100%; 
+		}
+		
+	}
+	@media all and (max-width:320px) {
+		
+	}
 
 
-.list-wrapper {max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap;}
-.list-wrapper .list {flex: 0 0 25%; padding: 1%;}
-
-/* @media all, print, screen */
-@media all and (max-width: 1200px) {
-	.list-wrapper .list {flex: 0 0 33.3333%;}
-} 
-
-@media all and (max-width: 992px) {
-	.list-wrapper .list {flex: 0 0 50%;}
-} 
-
-@media all and (max-width: 768px) {
-	.header-wrapper {display: none;}
-	.header-wrapper.mobile {display: flex;}
-} 
-
-@media all and (max-width: 576px) {
-	.list-wrapper .list {flex: 0 0 100%;}
-} 
-
-@media all and (max-width: 320px) {
-
-} 

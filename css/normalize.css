@@ -347,6 +347,3 @@ template {
 [hidden] {
   display: none;
 }
-
-.clear::after {display: block; content: ""; clear: both;}
-.w100 {width: 100%;}

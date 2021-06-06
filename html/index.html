@@ -1,64 +1,187 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Parallax 사이트</title>
-	<link rel="stylesheet" href="../css/all.min.css">
-	<link rel="stylesheet" href="../css/animate.min.css">
+	<title>parallax 사이트</title>
+	<link rel="stylesheet" href="../css/all.css">
+	<!-- <link rel="stylesheet" href="../css/animation.css"> -->
 	<link rel="stylesheet" href="../css/base.css">
 	<link rel="stylesheet" href="../css/index.css">
-	<script src="../js/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="../js/wow.min.js"></script>
 </head>
+
 <body>
+
 	<!-- header-wrapper -->
 	<header class="header-wrapper">
-		<div class="navi-wrap">
-			<a href="#" class="navi"> HOME</a>
-			<a href="#" class="navi"><i class="fa fa-user"></i> ABOUT</a>
-			<a href="#" class="navi"><i class="fa fa-th"></i> PORTFOLIO</a>
-			<a href="#" class="navi"><i class="fa fa-envelope"></i> CONTACT</a>
-		</div>
+		<ul class="navi-wrap">
+			<li><a href="#" class="navi">HOME</a></li>
+			<li><a href="#" class="navi"><i class="fa fa-user"></i> ABOUT</a></li>
+			<li><a href="#" class="navi"><i class="fa fa-th"></i> PORTFOLIO</a></li>
+			<li><a href="#" class="navi"><i class="fa fa-envelope"></i> CONTACT</a></li>
+		</ul>
 		<div class="search-wrap">
-			<a href="#" class="fa fa-search"></a>
+			<a href="#" class="fa fa-search navi-search"></a>
+			<a href="#" class="fa fa-bars navi-bars"></a>
 		</div>
 	</header>
 
 	<!-- main-wrapper -->
+
 	<section class="main-wrapper">
 		<div>
 			<h1 class="logo">MY WEBSITE LOGO</h1>
+			<h1 class="logo mobile">MY LOGO</h1>
 		</div>
 	</section>
-
-
 	<!-- about-wrapper -->
-	<section class="about-wrapper">
 
+	<section class="about-wrapper wrapper">
+		<div class="title-wrap">
+			<h2 class="title">ABOUT ME</h2>
+			<p class="desc">I love photography</p>
+		</div>
+
+		<div class="content">
+			We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem
+			ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+			aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+			consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+			veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</div>
+		<div class="content-wrapper">
+			<div class="img-wrap">
+				<h3>
+					<i class="fa fa-user"></i>My Name
+				</h3>
+				<div>
+					<img src="../img/avatar_hat.jpg" class="w100" alt="photo">
+				</div>
+			</div>
+			<div class="content">
+				Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+				laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+				ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		</div>
+		<div class="graph-wrapper">
+			<h4 class="title">
+				Im really good at:
+			</h4>
+			<ul class="graph-wrap">
+				<li class="graph">
+					<div class="title">
+						<i class="fa fa-camera"></i>Photography
+					</div>
+					<div class="bar-wrap">
+						<div class="bar">90%</div>
+					</div>
+				</li>
+				<li class="graph">
+					<div class="title">
+						<i class="fa fa-laptop"></i>Web Design
+					</div>
+					<div class="bar-wrap">
+						<div class="bar">85%</div>
+					</div>
+				</li>
+				<li class="graph">
+					<div class="title">
+						<i class="fa fa-photo-video"></i>Photoshop
+					</div>
+					<div class="bar-wrap">
+						<div class="bar">75%</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</section>
-
-
 	<!-- pf-wrapper -->
 	<section class="pf-wrapper">
+		<ul class="prj-wrap">
+			<li class="prj">
+				<div class="count">14+</div>
+				<h5 class="title">Partners</h5>
+			</li>
+			<li class="prj">
+				<div class="count">55+</div>
+				<h5 class="title">Projects Done</h5>
+			</li>
+			<li class="prj">
+				<div class="count">89+</div>
+				<h5 class="title">Happy Clients</h5>
+			</li>
+			<li class="prj">
+				<div class="count">150+</div>
+				<h5 class="title">Meetings</h5>
+			</li>
+		</ul>
 
+		<div class="bg-wrap">
+			<div>
+				<h2 class="title">PORTFOLIO</h2>
+		  </div>
+		</div>
+
+		<div class="work-wrapper wrapper">
+			<div class="title-wrap">
+				<h2 class="title">MY WORK</h2>
+				<p class="desc">Here are some of my latest lorem work ipsum tipsum.<br>
+					Click on the images to make them bigger
+				</p>
+			</div>
+			<ul class="work-wrap">
+				<li class="work"><a href="#"><img  src="../img/p1.jpg" class="w100"></a></li>
+				<li class="work"><a href="#"><img  src="../img/p2.jpg" class="w100"></a></li>
+				<li class="work"><a href="#"><img  src="../img/p3.jpg" class="w100"></a></li>
+				<li class="work"><a href="#"><img  src="../img/p4.jpg" class="w100"></a></li>
+				<li class="work"><a href="#"><img  src="../img/p5.jpg" class="w100"></a></li>
+				<li class="work"><a href="#"><img  src="../img/p6.jpg" class="w100"></a></li>
+				<li class="work"><a href="#"><img  src="../img/p7.jpg" class="w100"></a></li>
+				<li class="work"><a href="#"><img  src="../img/p8.jpg" class="w100"></a></li>
+			</ul>
+			<div class="bt-wrap">
+				<a href="#">LOAD MORE</a>
+			</div>
+		</div>
 	</section>
-
-
 	<!-- contact-wrapper -->
+
 	<section class="contact-wrapper">
-
+		<div class="bg-wrap">
+			<div>
+				<h2 class="title">CONTACT</h2>
+			</div>
+		</div>
 	</section>
-
-
 	<!-- footer-wrapper -->
+
 	<footer class="footer-wrapper">
 
 	</footer>
 
 
 
-	<script>new WOW().init()</script>
+	<script>
+		new WOW().init()
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('.header-wrapper').addClass('active');
+			} else {
+				$('.header-wrapper').removeClass('active');
+			}
+		});
+	</script>
 </body>
+
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>margin 상쇄</title>
+	<link rel="stylesheet" href="../css/base.css">
+
+	<style>
+	/*
+		박스안의 글자 자식에게 마진을 줬는데 상위 부모의 마진이 밀리는 현상
+		위에 아무것도 없으면 전체가 밀림.(기준점이 없기 때문임)
+		해결방법
+		1.마진대신 패딩을 주는방법
+		2.박스 전체에 실체를 줌(기준점을 주어야함.)
+
+		마진의 상쇄작용
+		마진이 아래위로 서로 겹칠때 가장큰값만 적용됨.
+	*/
+		body{background-color: darkorange;}
+		.box{width: 100%;height: 20vh; margin: 5vw;}
+		.box1{background-color: darkorchid; border-top: 1px solid red;/* 기준점 */}
+		.box1 h1.title{border: 1px solid red; font-size: 5em; margin-top: 50px;}
+		.box2{background-color: darkslategray;}
+		.box3{background-color: dodgerblue;}
+	</style>
+
+</head>
+<body>
+
+	<div class="box box1">
+		<h1 class="title">Hello World</h1>
+	</div>
+	<div class="box box2"></div>
+	<div class="box box3"></div>
+	
+</body>
+</html>

@@ -1,66 +1,53 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Background-image</title>
+	<title>background-image</title>
 	<link rel="stylesheet" href="../css/base.css">
 	<style>
-		.wrapper {width: 100%; height: 100vh; border: 100px dashed red;
-			padding : 100px;
-			background-color: orange;
-			background-image: url('../img/p3.jpg');
-
+		.wrapper {width: 100%; height: 100vh; border: 50px solid red;
+			padding: 100px;
+			background-color: beige;
+			/* background-image: url(https://img2.daumcdn.net/thumb/S308x188a/?fname=http://img1.daumcdn.net/kakaotv/KAKAOACCOUNT/1288915457/thumb/20210530113659); */
+			background-image: url(../img/parallax1.jpg);
 			/* background-repeat: repeat; */
-			/* background-repeat: repeat-x; */
-			/* background-repeat: repeat-y; */
 			background-repeat: no-repeat;
-
-			/* background-position: left top; */
 			/* background-position: left center; */
-			/* background-position: left bottom; */
-			/* background-position: center top; */
-			/* background-position: center; */
-			/* background-position: center bottom; */
-			/* background-position: right top; */
-			/* background-position: right center; */
-			/* background-position: right bottom; */
-			background-position: 300px 100px;
-
-			/* 자기 크기로 보여라 */
-			/* background-size: auto auto;  */
-			/* background-size: 100% auto;  */
-			/* background-size: auto 100%;  */
-			/* background-size: 100% 100%;  */
 			background-size: cover; 
-
-			/* background-clip: border-box; */
-			/* background-clip: padding-box; */
-			/* background-clip: content-box; */
-
-			background-clip: text; /* 모든 background(color, image) */
-			-webkit-background-clip: text; /* prefix - chrome, safari, firefox */
-			-o-background-clip: text; /* prefix - opera */
-			-ms-background-clip: text; /* prefix - microsoft */
+			/* background-clip: border-box; 기본값
+			background-clip: padding-box;
+			background-clip: content-box; */
+		  background-clip: text;
+			-webkit-background-clip: text; /* prefix 제작중  -webkit chorme,safari,firefox 오페라 -o -microsoft 마소*/ 
 			color: transparent;
 
-			background-origin: border-box; /* background-image */
 			animation-name: bgAni;
 			animation-duration: 3s;
 			animation-iteration-count: infinite;
+
+			/* background-clip: border-box;/* color image 둘다 적용*/
+			background-origin: border-box;/* background image만 적용 padding 기본값 */ 
+	}
+
+	@keyframes bgAni {
+		0% {
+			background-position: 0 0;
 		}
-		h1 {font-size: 100px; font-weight: bold;}
-		@keyframes bgAni {
-			0% {background-position: 0 0;}
-			50% {background-position: 200px 200px;}
-			100% {background-position: 0 0;}
+		50% {
+			background-position: 200px 200px;
 		}
+		100% {
+			background-position: 0 0;
+		}
+		
+	}
 	</style>
 </head>
 <body>
 	<div class="wrapper">
-		<h1>HELLO BEAR</h1>
+		<h1>HELLO</h1>
 	</div>
 </body>
 </html>

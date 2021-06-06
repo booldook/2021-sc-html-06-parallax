@@ -1,0 +1,214 @@
+/*
+transtion 속성명 장면전환
+transform 속성명 변환 변환을 시작하지만 릴렉티브처럼 변화는 없다
+translate 속성값 이동
+*/
+
+html, body{
+	height: 10000px;
+}
+
+.wrapper{
+	max-width: 1000px;
+	margin: 50px auto;
+}
+
+.title-wrapper{
+	padding: 50px 0 30px 0;
+	text-align: center;
+}
+
+.content-wrapper {
+	border: 2px solid yellowgreen;
+	padding: 50px;
+	margin: 50px auto;
+}
+
+.box1{
+	border: 10px solid red;
+	background-color: blueviolet;
+	padding: 50px;
+	color: #fff;
+	display: inline-block;
+	transition: width 2s, background-color 1s;
+	width: 50%;
+}
+
+.box1:hover{
+	background-color: chartreuse;
+	color: #000;
+	width: 100%;
+}
+
+.box2{
+	width: 100px;
+	height: 100px;
+	background-color: coral;
+	/*transform: translate(50%,30%);*/ /* translate의 %는 본인크기의 %.*/
+	transition: all 1s;
+	/* transform: rotate(45deg); */
+	/* transform-origin: left top; */ /* 축이 바뀜*/
+	/* transform-origin: 200px center; */
+	
+	transition: all 1s;
+}
+
+.content-wrapper:hover .box2{
+	/* transform: translate(50%,0); */
+	/* transform: rotate(720deg);*/ /* 45도 움직임*/
+	/* transform: rotateY(180deg); */
+	transform: scale(2.5);
+}
+
+.content-wrapper.bg-wrapper{
+	padding: 0;
+	position: relative;
+}
+
+.bg-wrapper h3.title{
+	font-size: 80px;
+	position: absolute;
+	color: yellowgreen;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);/* 내높이의 반절만큼 내크기의 반절만큼 반대로움직여라 */
+}
+
+/* 하위요소을 인라인으로 만들고 상위요소에서 센터로 잡으면 가운데메뉴 만들수 있음.*/
+.header-wrapper{
+	margin: 50px 0;
+}
+
+.header-wrapper .navi-wrap{
+	text-align: center;
+}
+
+.header-wrapper .navi-wrap .navi{
+	display: inline-block;
+	padding: 16px 24px;
+	/* border : 1px solid red; */
+	cursor: pointer;
+	overflow: hidden;/* 내위치 밖으로나간걸 감춰라 */
+	/* transition: all 0.5s; */
+}
+
+.header-wrapper .navi-wrap .navi:hover{
+	/* transform: translateY(-12px); */
+}
+
+
+ .header-wrapper .navi-wrap .navi:hover > .bar{
+	transform: translateX(0);
+
+} 
+
+.header-wrapper .navi-wrap .navi .bar{
+	height: 2px;
+	background-color: #072791;
+	margin-top: 12px;
+	transition: transform 0.5s;
+	transform: scaleX(0);
+	transform-origin: right center;
+}
+
+.header-wrapper .navi-wrap .navi:hover .bar{
+	transform: scaleX(1);
+	transform-origin: left center;
+}
+
+.img-wrapper{
+	transition: all .5s;
+	max-width: 200px;
+	margin: 50px auto;
+	overflow: hidden;
+	
+}
+
+.img-wrapper:hover{
+	border-radius: 20px;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, .5);
+	
+}
+
+.img-wrapper img{
+	transition: all 1s;
+}
+
+.img-wrapper:hover img{
+	transform: scale(1.2);
+
+}
+
+.pers-wrap{
+	margin: 30px auto;
+	width: 300px;
+	perspective: 300px;
+	position: relative;
+}
+
+.pers-wrap .box{
+	transition: all 2s;
+	width: 100%;
+  background-color: rgba(0, 0, 0, .7);
+	color: #fff;
+	transform-style: preserve-3d;
+	padding: 36px 16px;
+	position: absolute;
+	bottom: 0;
+	transform: rotateX(-180deg);
+	transform-origin: bottom;
+	opacity: 0;
+}
+
+.pers-wrap:hover .box{
+	transform: rotateX(0);
+	opacity: 1;
+
+}
+
+.skew-wrap{
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+.skew{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	position: absolute;
+}
+
+.skew1{
+	transform-origin: left;
+	transform: skewY(22.5deg);
+}
+
+.skew2{
+	left: 100%;
+	top: 41%;
+	transform-origin: left;
+	background-color: cadetblue;
+	z-index: 3;
+	transform: skewY(-22.5deg);
+}
+
+.skew3{
+	transform-origin: left;
+	background-color: chocolate;
+	transform: skewY(-22.5deg);
+}
+
+.skew4{
+	left: 100%;
+	top: -41%;
+	transform-origin: left;
+	transform: skewY(22.5deg);
+}
+
+.pers-wrap .box {width: 100%; background-color: rgba(0,0,0,.7); color: #fff; padding: 36px 16px; position: absolute; bottom: 0;}
+.pers-wrap .box {width: 100%; background-color: rgba(0,0,0,.7); color: #fff; padding: 36px 16px; position: absolute; bottom: 0; left: 0;}
+
+
+
+
